@@ -12781,6 +12781,7 @@ var $searchForm = $("#searchForm");
 var $episodesList = $("#episodesList");
 var BASE_URL = 'http://api.tvmaze.com';
 var PLACEHOLDER_IMG = 'https://tinyurl.com/tv-missing';
+// interface IShowsAPI { }
 /** Given a search term, search for tv shows that match that query.
  *
  *  Returns (promise) array of show objects: [show, show, ...].
@@ -12812,6 +12813,7 @@ function getShowsByTerm(term) {
         });
     });
 }
+// show.show.image?.medium || PLACEHOLDER_IMG,
 /** Given list of shows, create markup for each and to DOM */
 function populateShows(shows) {
     $showsList.empty();
@@ -12841,6 +12843,7 @@ function searchForShowAndDisplay() {
         });
     });
 }
+// const p = searchForShowAndDisplay();
 /** Given a show ID, get from API and return (promise) array of episodes:
  *      { id, name, season, number }
  */

@@ -24,6 +24,8 @@ interface IEpisodes {
   number: number;
 }
 
+// interface IShowsAPI { }
+
 /** Given a search term, search for tv shows that match that query.
  *
  *  Returns (promise) array of show objects: [show, show, ...].
@@ -51,7 +53,7 @@ async function getShowsByTerm(term: string): Promise<IShows[]> {
 
   return output;
 }
-
+// show.show.image?.medium || PLACEHOLDER_IMG,
 
 /** Given list of shows, create markup for each and to DOM */
 
@@ -95,6 +97,8 @@ async function searchForShowAndDisplay(): Promise<void> {
   populateShows(shows);
 }
 
+// const p = searchForShowAndDisplay();
+
 /** Given a show ID, get from API and return (promise) array of episodes:
  *      { id, name, season, number }
  */
@@ -106,7 +110,7 @@ async function getEpisodesOfShow(id: number): Promise<IEpisodes[]> {
   });
   console.log("getEpisodesOfShow resp is", resp);
   // return resp.data; // This actually works!
-
+  // TODO: rename "output"
   const output = resp.data.map( e => ({
     id: e.id,
     name: e.name,
