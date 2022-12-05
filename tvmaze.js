@@ -12781,7 +12781,6 @@ var $searchForm = $("#searchForm");
 var $episodesList = $("#episodesList");
 var BASE_URL = 'http://api.tvmaze.com';
 var PLACEHOLDER_IMG = 'https://tinyurl.com/tv-missing';
-// interface IShowsAPI { }
 /** Given a search term, search for tv shows that match that query.
  *
  *  Returns (promise) array of show objects: [show, show, ...].

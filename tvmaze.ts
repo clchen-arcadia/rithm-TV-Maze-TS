@@ -9,13 +9,18 @@ const $episodesList = $("#episodesList");
 const BASE_URL = 'http://api.tvmaze.com';
 const PLACEHOLDER_IMG = 'https://tinyurl.com/tv-missing';
 
-// Is this a minimum??
+
 interface IShows {
   id: number;
   image: string;
   name: string;
   summary: string;
 }
+/**
+ * x:IShows = {
+
+}
+ */
 
 interface IEpisodes {
   id: number;
@@ -24,8 +29,15 @@ interface IEpisodes {
   number: number;
 }
 
-// interface IShowsAPI { }
-
+// NOTE: FINAL: this is NOT a minimum, this IS the hard-coded
+// BUT in this specific case, because it is an external API, TS-transpiler will not
+// crash.
+interface IShowsAPI {
+  id: number;
+  image: {medium: string} | null;
+  name: string;
+  summary: string;
+}
 /** Given a search term, search for tv shows that match that query.
  *
  *  Returns (promise) array of show objects: [show, show, ...].
